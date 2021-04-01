@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+    /* NavBar*/
+.logo {
+    color: white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-family: 'Oswald',
+    sans-serif;
+}
+span {
+    color: rgb(199, 47, 47);
+}
+header {
+    display: inline;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 4em;
+    background-color: rgb(27, 27, 27);
+    font-family: 'Barlow Condensed', sans-serif;
+    position: sticky; 
+    top: 0;
+}
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+}
+.nav-link li {
+    list-style: none;
+}
+.nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav li a:hover {
+    color: rgb(194, 58, 58);
+    cursor: default;
+}
+.mobile {
+  display: none;
+}
+.mobile div {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+}
+
+    /* Content atau isi */
+.banner {
+    background-image: url(image/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner-button {
+    border: rgba(204, 204, 204, 0.18) 1px solid;
+    padding: 12px 35px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px 25px 25px 25px;
+    font-size: 15px;
+    margin-top: 50px;
+}
+.banner-button:hover {
+    background-color: rgb(78, 74, 74);
+}
+.home {
+    text-align: center;
+    padding: 280px 0 310px;
+    background-color: rgba(26, 29, 24, 0.74);
+    color: white;
+}
+.home h2 {
+    font-size: 35px;
+}
+ article h2 {
+    text-align: center;  
+    margin-top: 3em;  
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+article p{
+   text-align: justify;
+   margin: 2em 2em 2em 2em;
+}
+h3 {
+    margin: 2em 0 0 2em;
+    color: orange;
+}
+#recommend p {
+    text-align: center;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+.flex-container-row {
+    display: flex;
+    margin: 0 2em 2em 2em;
+}
+.display {
+    flex-basis: 50%;
+}
+.set-image {
+    width: 400px;
+    height: 300px;
+    margin-top: 2em;
+}
+figcaption {
+    margin-top: 5px;
+    font-style: italic;
+}
+footer {
+    padding: 30px;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media screen and (max-width: 1215px) {
+    .nav-link {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .flex-container-row {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        height: 40vh;
+        top: 7vh;
+        background-color: rgb(27, 27, 27);
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .home h2 {
+        font-size: 30px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+@keyframes navBarTran {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
